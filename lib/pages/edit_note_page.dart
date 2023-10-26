@@ -400,16 +400,27 @@ class _EditNotePageState extends State<EditNotePage> {
                                     borderSide: BorderSide.none),
                               ),
                             ),
-                            NewCustomTextField(
+                            TextField(
+                              // minLines: minLines,
                               controller: _noteTextController,
-                              focusNode: contentFocusNode,
-                              maxLines: minLines,
-                              minLines: null,
+                              focusNode: titleFocusNode,
                               onSubmitted: (value) {
                                 contentFocusNode.requestFocus();
                               },
+                              style: TextStyle(
+                                fontSize: 15,
+                              ),
+                              maxLines:
+                                  null, // Allow the TextField to expand freely
                               decoration: InputDecoration(
-                                hintText: 'Content',
+                                contentPadding: EdgeInsets.symmetric(
+                                    vertical: 5, horizontal: 12),
+                                hintText: 'texts',
+                                hintStyle: TextStyle(
+                                  fontSize: 15,
+                                ),
+                                // label: Text('Title'),
+                                // isCollapsed: true,
                                 fillColor: Colors.transparent,
                                 enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide.none),
@@ -417,6 +428,23 @@ class _EditNotePageState extends State<EditNotePage> {
                                     borderSide: BorderSide.none),
                               ),
                             ),
+                            // NewCustomTextField(
+                            //   controller: _noteTextController,
+                            //   focusNode: contentFocusNode,
+                            //   maxLines: null,
+                            //   minLines: null,
+                            //   onSubmitted: (value) {
+                            //     contentFocusNode.requestFocus();
+                            //   },
+                            //   decoration: InputDecoration(
+                            //     hintText: 'Content',
+                            //     fillColor: Colors.transparent,
+                            //     enabledBorder: OutlineInputBorder(
+                            //         borderSide: BorderSide.none),
+                            //     focusedBorder: OutlineInputBorder(
+                            //         borderSide: BorderSide.none),
+                            //   ),
+                            // ),
                             // Stack(
                             //   alignment: Alignment.center,
                             //   children: [
